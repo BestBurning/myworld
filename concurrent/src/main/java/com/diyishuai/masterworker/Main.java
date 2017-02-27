@@ -22,7 +22,8 @@ public class Main {
         }
         //2 创建Master
         System.out.println(Runtime.getRuntime().availableProcessors());
-        Master master = new Master(Runtime.getRuntime().availableProcessors());
+//        Master master = new Master(Runtime.getRuntime().availableProcessors());
+        Master master = new Master(10);
         //3 提交任务
         master.submit(tasks);
         //4 执行操作

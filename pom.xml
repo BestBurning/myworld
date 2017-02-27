@@ -19,6 +19,7 @@
       <module>test</module>
       <module>webservice</module>
       <module>drools</module>
+    <module>flume</module>
   </modules>
   <packaging>pom</packaging>
 

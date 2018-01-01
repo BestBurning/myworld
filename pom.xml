@@ -19,7 +19,8 @@
       <module>test</module>
       <module>webservice</module>
       <module>drools</module>
-    <module>flume</module>
+      <module>flume</module>
+      <module>zookeeper</module>
   </modules>
   <packaging>pom</packaging>
 

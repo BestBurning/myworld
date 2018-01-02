@@ -7,3 +7,5 @@ this is my world, there are some code when I learn someting
 - flume
 - drools
 - zookeeper
+- activityMq
+- webservice

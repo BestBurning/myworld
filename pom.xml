@@ -21,6 +21,8 @@
       <module>drools</module>
       <module>flume</module>
       <module>zookeeper</module>
+      <module>activityMq</module>
+      <module>webservice</module>
   </modules>
   <packaging>pom</packaging>
 

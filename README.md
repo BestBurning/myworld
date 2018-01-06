@@ -10,4 +10,5 @@ this is my world, there are some code when I learn someting
 - activityMq
 - webservice
 - nio netty
-- rpc(simple impl && the author is me) 
+- rpc(simple impl && the author is me)
+- hadoop 

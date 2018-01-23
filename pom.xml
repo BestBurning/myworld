@@ -29,6 +29,7 @@
     <module>netty</module>
       <module>hadoop</module>
     <module>hbase</module>
+      <module>storm</module>
   </modules>
   <packaging>pom</packaging>
 

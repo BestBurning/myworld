@@ -1,7 +1,7 @@
-package com.diyishuai.controller;
+package com.diyishuai.springboot.controller;
 
-import com.diyishuai.dao.PersonDao;
-import com.diyishuai.model.Person;
+import com.diyishuai.springboot.dao.PersonDao;
+import com.diyishuai.springboot.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

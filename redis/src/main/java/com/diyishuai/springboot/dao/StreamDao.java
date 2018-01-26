@@ -1,4 +1,4 @@
-package com.diyishuai.dao;
+package com.diyishuai.springboot.dao;
 
 import com.diyishuai.annotation.MyBatisRepository;
 import com.diyishuai.domain.StreamTest;

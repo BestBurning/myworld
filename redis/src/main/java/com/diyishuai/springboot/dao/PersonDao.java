@@ -1,6 +1,6 @@
-package com.diyishuai.dao;
+package com.diyishuai.springboot.dao;
 
-import com.diyishuai.model.Person;
+import com.diyishuai.springboot.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;

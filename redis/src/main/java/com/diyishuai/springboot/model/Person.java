@@ -1,4 +1,4 @@
-package com.diyishuai.model;
+package com.diyishuai.springboot.model;
 
 import java.io.Serializable;
 

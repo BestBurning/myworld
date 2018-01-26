@@ -1,4 +1,4 @@
-package com.diyishuai.model;
+package com.diyishuai.springboot.model;
 
 /**
  * Created by Bruce on 16/7/21.

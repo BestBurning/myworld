@@ -30,6 +30,8 @@
       <module>hadoop</module>
     <module>hbase</module>
       <module>storm</module>
+      <module>kafkaV1</module>
+      <module>storm-kafka</module>
   </modules>
   <packaging>pom</packaging>
 

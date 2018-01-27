@@ -27,6 +27,8 @@ public class OrderBolt extends BaseRichBolt{
     public static final String REDIS_HOST = "server03";
     public static final String REDIS_PASSWORD = "admin";
 
+    private OutputCollector collector;
+
     @Override
     public void prepare(Map map, TopologyContext topologyContext, OutputCollector outputCollector) {
         //change "maxActive" -> "maxTotal" and "maxWait" -> "maxWaitMillis" in all examples
@@ -56,6 +58,8 @@ public class OrderBolt extends BaseRichBolt{
         infoMap.put("c","phone");
         infoMap.put("s","121");
         infoMap.put("p","iphone");
+
+        this.collector = outputCollector;
     }
 
     @Override
@@ -77,6 +81,7 @@ public class OrderBolt extends BaseRichBolt{
             String bid =  getBubyProductId(orderInfo.getProductId(),"b");
             jedis.incrBy(bid+"Amount",orderInfo.getProductPrice());
             jedis.close();
+            collector.ack(tuple);
         } catch (JsonSyntaxException e) {
             System.out.println("json异常");
         }

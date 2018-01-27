@@ -1,52 +1,52 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.3.0.RELEASE</version>
-  </parent>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
 
-  <groupId>com.diyishuai</groupId>
-  <artifactId>myworld</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <modules>
-    <module>concurrent</module>
-    <module>java8</module>
-    <module>redis</module>
-    <module>kafka</module>
-    <module>test</module>
-    <module>webservice</module>
-    <module>drools</module>
-    <module>flume</module>
-    <module>zookeeper</module>
-    <module>activityMq</module>
-    <module>webservice</module>
-    <module>nio</module>
-    <module>spring-annotation</module>
-    <module>rpc</module>
-    <module>netty</module>
-      <module>hadoop</module>
-    <module>hbase</module>
-      <module>storm</module>
-      <module>kafkaV1</module>
-      <module>storm-kafka</module>
-  </modules>
-  <packaging>pom</packaging>
+    <groupId>com.diyishuai</groupId>
+    <artifactId>myworld</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>concurrent</module>
+        <module>java8</module>
+        <module>redis</module>
+        <module>kafka</module>
+        <module>test</module>
+        <module>webservice</module>
+        <module>drools</module>
+        <module>flume</module>
+        <module>zookeeper</module>
+        <module>activityMq</module>
+        <module>webservice</module>
+        <module>nio</module>
+        <module>spring-annotation</module>
+        <module>rpc</module>
+        <module>netty</module>
+        <module>hadoop</module>
+        <module>hbase</module>
+        <module>storm</module>
+        <module>storm-kafka</module>
+        <module>jsoup</module>
+    </modules>
+    <packaging>pom</packaging>
 
-  <name>myworld</name>
-  <url>http://maven.apache.org</url>
+    <name>myworld</name>
+    <url>http://di1shuai.com</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-    </dependency>
-  </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
 </project>

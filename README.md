@@ -15,3 +15,4 @@ this is my world, there are some code when I learn someting
 - hbase 
 - storm
 - storm-kafka
+- jsoup

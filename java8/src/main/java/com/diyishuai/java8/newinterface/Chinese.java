@@ -1,4 +1,4 @@
-package com.diyishuai.newinterface;
+package com.diyishuai.java8.newinterface;
 
 public class Chinese extends Human implements Animal {
     @Override

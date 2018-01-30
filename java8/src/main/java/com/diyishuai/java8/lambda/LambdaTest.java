@@ -1,4 +1,4 @@
-package com.diyishuai.lambda;
+package com.diyishuai.java8.lambda;
 
 import java.util.Arrays;
 import java.util.List;

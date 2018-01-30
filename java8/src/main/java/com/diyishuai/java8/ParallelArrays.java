@@ -1,4 +1,4 @@
-package com.diyishuai.lambda;
+package com.diyishuai.java8;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;

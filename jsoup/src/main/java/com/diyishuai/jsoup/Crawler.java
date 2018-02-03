@@ -12,7 +12,6 @@ public class Crawler implements Runnable{
     public static final String domain = "https://www.lagou.com/jobs";
 
 
-    @Override
     public void run() {
         Connection conn = Jsoup.connect(domain);
         // 修改http包中的header,伪装成浏览器进行抓取

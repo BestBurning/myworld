@@ -11,12 +11,6 @@ import org.apache.spark.{SparkConf, SparkContext}
 object WordCount {
 
   def main(args: Array[String]): Unit = {
-    println("=======================")
-    println("=======================")
-    println("=======================")
-    println("=======================")
-    println("=======================")
-    println("=======================")
     val conf = new SparkConf().setAppName("WC")
     val sc = new SparkContext(conf)
     sc.textFile(args(0))

@@ -13,11 +13,19 @@ object WordCount {
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setAppName("WC")
     val sc = new SparkContext(conf)
+
+    // textFile 产生HadoopRDD和MapPartitionsRDD
+
     sc.textFile(args(0))
+      //MapPartitionsRDD
       .flatMap(_.split(" "))
+      //MapPartitionsRDD
       .map((_,1))
+      //ShuffledRDD
       .reduceByKey(_+_)
+      //MapPartitionsRDD & ShuffledRDD
       .sortBy(_._2,false)
+      //MapPartitionsRDD
       .saveAsTextFile(args(1))
     sc.stop()
 

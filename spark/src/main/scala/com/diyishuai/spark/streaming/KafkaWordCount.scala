@@ -45,11 +45,28 @@ object KafkaWordCount {
       ConsumerStrategies.Subscribe[String, String](topics, kafkaParams)
     )
     //    stream.map(record => (record.key, record.value)).print()
+
+    /**
+      *     >hello hihi hehe hello hello tom
+            >ajshd
+            >asdhijasd sadkjhajskd adsdkjhajksd
+      */
     stream.map(_.value)
       .flatMap(_.split(" "))
       .map((_, 1))
       .updateStateByKey(updateFunction, new HashPartitioner(sc.defaultParallelism), true)
       .print()
+
+    /**
+      * (adsdkjhajksd,1)
+        (sadkjhajskd,1)
+        (hehe,9)
+        (tom,9)
+        (ajshd,1)
+        (hello,27)
+        (hihi,9)
+        (asdhijasd,1)
+      */
 
     ssc.start() // Start the computation
     ssc.awaitTermination() // Wait for the computation to terminate

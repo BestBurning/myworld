@@ -23,7 +23,6 @@
         <module>zookeeper</module>
         <module>activityMq</module>
         <module>webservice</module>
-        <module>nio</module>
         <module>spring-annotation</module>
         <module>rpc</module>
         <module>netty</module>

@@ -1,6 +1,6 @@
 package com.diyishuai.redis.list;
 
-import org.springframework.util.StringUtils;
+//import org.springframework.util.StringUtils;
 
 import java.util.Date;
 
@@ -47,11 +47,11 @@ public class Article {
 				+ content + ", author=" + author + ", date=" + date + "]";
 	}
 	
-	public boolean isNotNull() {
-		if (StringUtils.isEmpty(content)) {
-			return false;
-		}
-		return true;
-	}
+//	public boolean isNotNull() {
+//		if (StringUtils.isEmpty(content)) {
+//			return false;
+//		}
+//		return true;
+//	}
 
 }

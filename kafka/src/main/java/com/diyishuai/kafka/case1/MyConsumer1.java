@@ -14,7 +14,7 @@ import java.util.Properties;
 public class MyConsumer1 {
     public static void main(String[] args) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "localhost:9093,localhost:9094");
+        props.put("bootstrap.servers", "localhost:9092");
         props.put("group.id", "test");
         props.put("enable.auto.commit", "true");  //自动commit
         props.put("auto.commit.interval.ms", "1000"); //定时commit的周期
@@ -23,7 +23,7 @@ public class MyConsumer1 {
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         KafkaConsumer<String, String> consumer = new KafkaConsumer(props);
 //        consumer.subscribe(Arrays.asList("foo", "bar")); //subscribe，foo，bar，两个topic
-        consumer.subscribe(Arrays.asList("my-topic-1")); //subscribe，foo，bar，两个topic
+        consumer.subscribe(Arrays.asList("test")); //subscribe，foo，bar，两个topic
         while (true) {
             ConsumerRecords<String, String> records = consumer.poll(100);  //poll 100 条 records
             for (ConsumerRecord<String, String> record : records)

@@ -25,14 +25,22 @@ public class HelloWorld {
         SecurityManager securityManager = factory.getInstance();
         SecurityUtils.setSecurityManager(securityManager);
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken passwordToken = new UsernamePasswordToken("zhang", "123");
-        try {
-            subject.login(passwordToken);
-        }catch (AuthenticationException e){
-            e.printStackTrace();
+        if ( !subject.isAuthenticated() ) {
+            //collect user principals and credentials in a gui specific manner
+            //such as username/password html form, X509 certificate, OpenID, etc.
+            //We'll use the username/password example here since it is the most common.
+            //(do you know what movie this is from? ;)
+            UsernamePasswordToken token = new UsernamePasswordToken("zhang", "123");
+            //this is all you have to do to support 'remember me' (no config - built in!):
+            token.setRememberMe(true);
+            subject.login(token);
+            System.out.println(subject.getPrincipal());
         }
-
-
+        if ( subject.hasRole( "schwartz" ) ) {
+            System.out.println("May the Schwartz be with you!" );
+        } else {
+            System.out.println( "Hello, mere mortal." );
+        }
         System.out.println(subject.isAuthenticated());
     }
 

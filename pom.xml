@@ -35,6 +35,7 @@
         <module>mongo</module>
         <module>shiro</module>
         <module>jwt</module>
+        <module>qrgen</module>
     </modules>
     <packaging>pom</packaging>
 

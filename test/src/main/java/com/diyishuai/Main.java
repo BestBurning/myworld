@@ -1,8 +1,9 @@
 package com.diyishuai;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import com.diyishuai.model.B;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Bruce
@@ -12,22 +13,55 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception{
-        if (args.length == 0 ){
-            throw new Exception("没有传入文件参数");
-        }
-        File file = new File(args[0]);
-        if(!file.exists()){
-            throw new Exception("File not exist，path:"+file.getAbsolutePath());
-        }
-        System.out.println(file.getName()+"文件存在,内容如下：");
-        System.out.println("===================================================================");
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
-        while (bufferedReader.ready()){
-            System.out.println(bufferedReader.readLine());
-        }
-        bufferedReader.close();
-        System.out.println("===================================================================");
-        System.out.println("成功读取文件："+file.getAbsolutePath());
+        List list = new ArrayList();
 
+        List newList = new ArrayList();
+
+        list.add("1");
+        list.add("2");
+        list.add("5");
+
+        newList.add("1");
+        newList.add("2");
+        newList.add("3");
+        newList.add("4");
+
+        System.out.println(returnChange(list,newList));
+
+//        list.forEach(acr -> {
+//            newList.contains(acr);
+//            newList.remove(acr);
+//        });
+
+//        Iterator iterator = list.iterator();
+//        while (iterator.hasNext()){
+//            Object next = iterator.next();
+//            newList.contains(next);
+//            newList.remove(next);
+//        }
+//        newList.forEach(o -> {
+//            System.out.println(o);
+//        });
+
+
+
+
+    }
+
+    /**
+     * 返回 A-B
+     * @param collectA
+     * @param collectB
+     * @return
+     */
+    private static String returnChange(List<String> collectA, List<String> collectB) {
+        StringBuilder changeSB = new StringBuilder("");
+        collectA.forEach(A -> {
+            if (!collectB.contains(A))
+                changeSB.append(A+",");
+        });
+        if (changeSB.length()>0)
+            changeSB.deleteCharAt(changeSB.length()-1);
+        return changeSB.toString();
     }
 }

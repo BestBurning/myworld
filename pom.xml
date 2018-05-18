@@ -36,6 +36,7 @@
         <module>shiro</module>
         <module>jwt</module>
         <module>qrgen</module>
+        <module>rabbitmq</module>
     </modules>
     <packaging>pom</packaging>
 

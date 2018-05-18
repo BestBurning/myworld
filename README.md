@@ -18,3 +18,4 @@ this is my world, there are some code when I learn someting
 - jsoup
 - jwt
 - qrgen
+- rabbitMq

@@ -13,39 +13,7 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception{
-        List list = new ArrayList();
-
-        List newList = new ArrayList();
-
-        list.add("1");
-        list.add("2");
-        list.add("5");
-
-        newList.add("1");
-        newList.add("2");
-        newList.add("3");
-        newList.add("4");
-
-        System.out.println(returnChange(list,newList));
-
-//        list.forEach(acr -> {
-//            newList.contains(acr);
-//            newList.remove(acr);
-//        });
-
-//        Iterator iterator = list.iterator();
-//        while (iterator.hasNext()){
-//            Object next = iterator.next();
-//            newList.contains(next);
-//            newList.remove(next);
-//        }
-//        newList.forEach(o -> {
-//            System.out.println(o);
-//        });
-
-
-
-
+        System.out.println("字数".length());
     }
 
     /**

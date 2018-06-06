@@ -37,6 +37,7 @@
         <module>jwt</module>
         <module>qrgen</module>
         <module>rabbitmq</module>
+        <module>websocket</module>
     </modules>
     <packaging>pom</packaging>
 

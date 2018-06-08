@@ -38,6 +38,7 @@
         <module>qrgen</module>
         <module>rabbitmq</module>
         <module>websocket</module>
+        <module>threadPool</module>
     </modules>
     <packaging>pom</packaging>
 

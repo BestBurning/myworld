@@ -39,6 +39,7 @@
         <module>rabbitmq</module>
         <module>websocket</module>
         <module>threadPool</module>
+        <module>thymeleaf</module>
     </modules>
     <packaging>pom</packaging>
 

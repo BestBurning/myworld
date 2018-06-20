@@ -113,7 +113,7 @@
 </head>
 
 <body>
-<input type="hidden" id ="tag" value="${ctx_display_switch}"/>
+<input type="hidden" id ="tag" th:attr="value=${ctx_display_switch}"/>
 
 
 <!--<a href= "${ad_link_url}" title= "下载链接">-->
@@ -128,9 +128,9 @@
     var val = document.getElementById("tag").value;
     var ctaname = document.getElementsByClassName("cta")[0];
     if(val == 0){
-        ctaname.style.display = "block";
-    }else if(val == 1){
         ctaname.style.display = "none";
+    }else if(val == 1){
+        ctaname.style.display = "block";
     }
 
 </script>

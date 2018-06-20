@@ -1,0 +1,9 @@
+spring:
+  mail:
+    host: smtp.mxhichina.com
+    port: 25
+    username: email
+    password: pwd
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true

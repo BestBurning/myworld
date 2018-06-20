@@ -40,6 +40,7 @@
         <module>websocket</module>
         <module>threadPool</module>
         <module>thymeleaf</module>
+        <module>spring-boot-mail</module>
     </modules>
     <packaging>pom</packaging>
 

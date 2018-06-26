@@ -41,6 +41,7 @@
         <module>threadPool</module>
         <module>thymeleaf</module>
         <module>spring-boot-mail</module>
+        <module>mybatis-plus</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -51,11 +52,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-    </dependencies>
 </project>

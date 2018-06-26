@@ -2,8 +2,9 @@ package com.diyishuai;
 
 import com.diyishuai.model.B;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.util.*;
 
 /**
  * @author Bruce
@@ -11,10 +12,7 @@ import java.util.List;
  */
 public class Main {
 
-
-    public static void main(String[] args) throws Exception{
-        System.out.println("字数".length());
-    }
+    public static final String ALIYUN_OSS_ENDPOINT = "oss-cn-beijing.aliyuncs.com";
 
     /**
      * 返回 A-B
@@ -31,5 +29,17 @@ public class Main {
         if (changeSB.length()>0)
             changeSB.deleteCharAt(changeSB.length()-1);
         return changeSB.toString();
+    }
+
+    public static void main(String[] args) {
+        Calendar calendar=Calendar.getInstance();
+        Date date = new Date();
+        calendar.setTime(date);
+        System.out.println(calendar.get(Calendar.DAY_OF_MONTH));//今天的日期
+        calendar.set(Calendar.DAY_OF_MONTH,calendar.get(Calendar.DAY_OF_MONTH)+1);//让日期加1
+        System.out.println(calendar.get(Calendar.DATE));//加1之后的日期Top
+        System.out.println(date);
+        System.out.println(calendar.getTime());
+
     }
 }

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.centrixlink.dsp.dashboard.common.dao.StudentDao">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.diyishuai.mybatisplus.domain.Student">
+		<result column="id" property="id" />
+		<result column="version" property="version" />
+		<result column="name" property="name" />
+		<result column="is_admin" property="isAdmin" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id,
+        version,
+		name,
+		is_admin
+    </sql>
+</mapper>

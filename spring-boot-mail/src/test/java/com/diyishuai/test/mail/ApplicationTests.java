@@ -7,12 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
-
-import javax.mail.internet.MimeMessage;
-import java.util.Map;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = MailApplication.class)

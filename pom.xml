@@ -42,6 +42,8 @@
         <module>thymeleaf</module>
         <module>spring-boot-mail</module>
         <module>mybatis-plus</module>
+        <module>flink</module>
+        <module>hive</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -7,7 +7,11 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author: Bruce
  * @date: 2019-10-24
- * @description: X --> Y --> Z
+ * @description:
+ *
+ * Lock相当于Synchonized可以精确唤醒
+ *
+ * X --> Y --> Z
  * ^           |
  * |___________|
  */

@@ -1,5 +1,7 @@
 package com.diyishuai.blockingqueue;
 
+import com.diyishuai.util.StringUtil;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -27,7 +29,7 @@ public class ArrayBlockingQueueDemo {
     }
 
     private static void timeout(List<String> list, BlockingQueue<String> blockingQueue) {
-        title("超时组", 80);
+        StringUtil.title("超时组", 80);
 
         list.forEach((s) -> {
             try {
@@ -59,7 +61,7 @@ public class ArrayBlockingQueueDemo {
      * @param blockingQueue
      */
     private static void blocking(List<String> list, BlockingQueue<String> blockingQueue) {
-        title("阻塞组", 80);
+        StringUtil.title("阻塞组", 80);
 
         new Thread(()->{
             int timeout = 20;
@@ -110,7 +112,7 @@ public class ArrayBlockingQueueDemo {
      * @param blockingQueue
      */
     private static void returnObj(List<String> list, BlockingQueue<String> blockingQueue) {
-        title("返回值组", 80);
+        StringUtil.title("返回值组", 80);
 
         list.forEach((s) -> {
             System.out.println("offer元素->" + s + ":" + (blockingQueue.offer(s)?true:false+" 队列满了,添加失败"));
@@ -136,7 +138,7 @@ public class ArrayBlockingQueueDemo {
      * @param blockingQueue
      */
     private static void throwException(List<String> list, BlockingQueue<String> blockingQueue) {
-        title("抛出异常组",80);
+        StringUtil.title("抛出异常组",80);
         try {
             //java.lang.IllegalStateException: Queue full
             list.forEach((s) -> {
@@ -157,25 +159,5 @@ public class ArrayBlockingQueueDemo {
             e.printStackTrace();
             System.out.println("没有元素了");
         }
-    }
-
-    private static void title(String str, int n) {
-        for (int i = 0; i < n; i++) {
-            System.out.print("=");
-        }
-        System.out.println();
-        int length = str.length();
-        if (n-length<2){
-            System.out.println(str);
-        }else {
-            for (int i = 0; i < (n-length)/2; i++) {
-                System.out.print(" ");
-            }
-            System.out.println(str);
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.print("=");
-        }
-        System.out.println();
     }
 }

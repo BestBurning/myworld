@@ -19,9 +19,11 @@ public class ThreadPoolDemo {
     private static Map<String,Integer> map = new ConcurrentHashMap<String,Integer>();
 
     public static void main(String[] args) {
+        System.out.println("JVM可用线程数:"+Runtime.getRuntime().availableProcessors());
         single();
         fix();
         cached();
+        workStealing();
     }
 
     private static void single() {
@@ -35,6 +37,11 @@ public class ThreadPoolDemo {
     private static void cached() {
         StringUtil.title("Cached");
         do20(Executors.newCachedThreadPool());
+    }
+
+    private static void workStealing() {
+        StringUtil.title("WorkStealing");
+        do20(Executors.newWorkStealingPool());
     }
 
     private static void do20(ExecutorService executorService) {

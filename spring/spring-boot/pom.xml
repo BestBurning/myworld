@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>spring</artifactId>
+        <groupId>com.diyishuai</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <packaging>pom</packaging>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>spring-boot</artifactId>
+
+    <modules>
+        <module>spring-boot-websocket</module>
+        <module>spring-boot-thymeleaf</module>
+        <module>spring-boot-threadpool</module>
+        <module>spring-boot-mail</module>
+        <module>spring-boot-mongo</module>
+        <module>spring-boot-rabbitmq</module>
+        <module>spring-boot-mybatis-plus</module>
+    </modules>
+</project>

@@ -20,7 +20,6 @@
         <module>flume</module>
         <module>zookeeper</module>
         <module>activityMq</module>
-        <module>spring-annotation</module>
         <module>rpc</module>
         <module>netty</module>
         <module>hadoop</module>
@@ -29,18 +28,12 @@
         <module>storm-kafka</module>
         <module>jsoup</module>
         <module>spark</module>
-        <module>mongo</module>
         <module>shiro</module>
         <module>jwt</module>
         <module>qrgen</module>
-        <module>rabbitmq</module>
-        <module>websocket</module>
-        <module>threadPool</module>
-        <module>thymeleaf</module>
-        <module>spring-boot-mail</module>
-        <module>mybatis-plus</module>
         <module>flink</module>
         <module>hive</module>
+        <module>spring</module>
     </modules>
     <packaging>pom</packaging>
 

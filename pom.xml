@@ -12,17 +12,14 @@
     <artifactId>myworld</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>concurrent</module>
-        <module>java8</module>
+        <module>java</module>
         <module>redis</module>
         <module>kafka</module>
         <module>test</module>
-        <module>webservice</module>
         <module>drools</module>
         <module>flume</module>
         <module>zookeeper</module>
         <module>activityMq</module>
-        <module>webservice</module>
         <module>spring-annotation</module>
         <module>rpc</module>
         <module>netty</module>
@@ -51,6 +48,11 @@
     <url>https://di1shuai.com</url>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 

@@ -1,14 +1,15 @@
-# myworld
-this is my world, there are some code when I learn someting
-- java8
+# MyWorld
+This is my world, there are some code when I learn someting
+
+- java
+  - concurrent
+  - java8
 - kafka
 - redis
-- concurrent
 - flume
 - drools
 - zookeeper
 - activityMq
-- webservice
 - websocket
 - nio netty
 - rpc(simple impl && the author is me)

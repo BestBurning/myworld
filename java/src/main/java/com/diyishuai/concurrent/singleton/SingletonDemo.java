@@ -1,4 +1,4 @@
-package com.diyishuai.singleton;
+package com.diyishuai.concurrent.singleton;
 
 /**
  * @author: Bruce

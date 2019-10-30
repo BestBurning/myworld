@@ -1,4 +1,4 @@
-package com.diyishuai.volatiledemo;
+package com.diyishuai.concurrent.volatiledemo;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;

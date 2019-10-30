@@ -1,4 +1,4 @@
-package com.diyishuai.collections;
+package com.diyishuai.concurrent.collections;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;

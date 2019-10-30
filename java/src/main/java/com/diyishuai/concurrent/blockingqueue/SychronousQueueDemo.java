@@ -1,4 +1,4 @@
-package com.diyishuai.blockingqueue;
+package com.diyishuai.concurrent.blockingqueue;
 
 import java.util.Arrays;
 import java.util.List;

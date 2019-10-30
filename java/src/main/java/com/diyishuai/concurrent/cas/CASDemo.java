@@ -1,4 +1,4 @@
-package com.diyishuai.cas;
+package com.diyishuai.concurrent.cas;
 
 import java.util.HashMap;
 import java.util.Map;

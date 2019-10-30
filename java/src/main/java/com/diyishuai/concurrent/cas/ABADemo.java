@@ -1,4 +1,4 @@
-package com.diyishuai.cas;
+package com.diyishuai.concurrent.cas;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;

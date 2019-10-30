@@ -1,4 +1,4 @@
-package com.diyishuai.util;
+package com.diyishuai.concurrent.util;
 
 /**
  * @author: Bruce

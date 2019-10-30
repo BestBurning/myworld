@@ -1,4 +1,4 @@
-package com.diyishuai.masterworker;
+package com.diyishuai.concurrent.masterworker;
 
 import java.util.ArrayList;
 import java.util.Arrays;

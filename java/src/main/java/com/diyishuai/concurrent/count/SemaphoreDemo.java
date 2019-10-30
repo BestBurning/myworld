@@ -1,4 +1,4 @@
-package com.diyishuai.count;
+package com.diyishuai.concurrent.count;
 
 import java.io.IOException;
 import java.util.concurrent.Semaphore;

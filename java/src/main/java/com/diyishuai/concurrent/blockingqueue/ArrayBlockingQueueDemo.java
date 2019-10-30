@@ -1,6 +1,6 @@
-package com.diyishuai.blockingqueue;
+package com.diyishuai.concurrent.blockingqueue;
 
-import com.diyishuai.util.StringUtil;
+import com.diyishuai.concurrent.util.StringUtil;
 
 import java.util.Arrays;
 import java.util.List;

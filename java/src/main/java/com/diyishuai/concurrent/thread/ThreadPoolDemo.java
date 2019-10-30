@@ -1,6 +1,6 @@
-package com.diyishuai.thread;
+package com.diyishuai.concurrent.thread;
 
-import com.diyishuai.util.StringUtil;
+import com.diyishuai.concurrent.util.StringUtil;
 
 import java.util.Map;
 import java.util.concurrent.*;

@@ -1,4 +1,4 @@
-package com.diyishuai.lock;
+package com.diyishuai.concurrent.lock;
 
 import java.util.concurrent.TimeUnit;
 

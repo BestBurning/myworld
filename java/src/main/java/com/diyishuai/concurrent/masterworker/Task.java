@@ -1,4 +1,4 @@
-package com.diyishuai.masterworker;
+package com.diyishuai.concurrent.masterworker;
 
 /**
  * @author Bruce

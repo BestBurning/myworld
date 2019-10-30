@@ -1,4 +1,4 @@
-package com.diyishuai.producerconsumer;
+package com.diyishuai.concurrent.producerconsumer;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;

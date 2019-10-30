@@ -1,4 +1,4 @@
-package com.diyishuai.blockingqueue;
+package com.diyishuai.concurrent.blockingqueue;
 
 import com.diyishuai.util.StringUtil;
 

@@ -1,4 +1,4 @@
-package com.diyishuai.count;
+package com.diyishuai.concurrent.count;
 
 import lombok.Getter;
 

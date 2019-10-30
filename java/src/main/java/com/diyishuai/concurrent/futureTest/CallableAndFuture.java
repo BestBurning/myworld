@@ -1,4 +1,4 @@
-package com.diyishuai.futureTest;
+package com.diyishuai.concurrent.futureTest;
 
 import java.util.Random;
 import java.util.concurrent.*;

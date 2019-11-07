@@ -1,0 +1,24 @@
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000
+        username: admin
+        password: admin
+        instance:
+          metadata:
+            user:
+              name: admin
+              password: admin
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8888
+

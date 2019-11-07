@@ -1,0 +1,9 @@
+server:
+  port: 8000
+
+spring:
+  security:
+    user:
+      name: admin
+      password: admin
+

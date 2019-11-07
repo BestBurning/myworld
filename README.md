@@ -24,7 +24,11 @@ There are some code when I learn someting.
 - shiro
 - spark
 - spring
+  - spring-annotation
   - spring-boot
+    - spring-boot-admin
+      - spring-boot-admin-client
+      - spring-boot-admin-server
     - spring-boot-websocket
     - spring-boot-thymeleaf
     - spring-boot-threadpool

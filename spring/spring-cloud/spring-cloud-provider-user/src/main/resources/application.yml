@@ -1,0 +1,94 @@
+spring:
+  profiles:
+    active: local
+
+  application:
+    name: provider-user
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    username: root
+    password: admin
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+eureka:
+    prefer-ip-address: true     #访问路径可以显示IP地址
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: 提供User表的CURD功能
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@
+
+---
+# local
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud
+server:
+  port: 8081
+
+eureka:
+  instance:
+    instance-id: provider-user
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+---
+# p1
+spring:
+  profiles: p1
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud1
+
+server:
+  port: 8081
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-1
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka
+
+---
+# p2
+spring:
+  profiles: p2
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud2
+
+server:
+  port: 8082
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-2
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka
+
+---
+# p3
+spring:
+  profiles: p3
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud3
+
+server:
+  port: 8083
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}-3       #${random.value}
+  client: #客户端注册进eureka服务列表内
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka

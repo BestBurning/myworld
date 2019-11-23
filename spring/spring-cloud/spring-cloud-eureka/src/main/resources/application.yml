@@ -1,0 +1,78 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: register-center
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+info:
+  app:
+    name: ${spring.application.name}
+    description: Eureka注册中心
+
+---
+# local单机版本
+spring:
+  profiles: local
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+---
+# eureka1
+spring:
+  profiles: rc1
+
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: eureka1
+    instance-id: ${spring.application.name}-1
+  client:
+    service-url:
+      defaultZone: http://eureka2:8762/eureka/,http://eureka3:8763/eureka/
+
+---
+# eureka2
+spring:
+  profiles: rc2
+
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: eureka2
+    instance-id: ${spring.application.name}-2
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka3:8763/eureka/
+
+---
+# eureka3
+spring:
+  profiles: rc3
+
+server:
+  port: 8763
+
+eureka:
+  instance:
+    hostname: eureka3
+    instance-id: ${spring.application.name}-3
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/

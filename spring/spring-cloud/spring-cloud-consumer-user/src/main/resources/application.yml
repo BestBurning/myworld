@@ -1,0 +1,23 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: consumer-user
+
+
+eureka:
+  instance:
+    instance-id: consumer-user
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: UserCURD功能的调用者
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@

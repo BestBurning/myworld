@@ -27,8 +27,6 @@ There are some code when I learn someting.
   - spring-annotation
   - spring-boot
     - spring-boot-admin
-      - spring-boot-admin-client
-      - spring-boot-admin-server
     - spring-boot-websocket
     - spring-boot-thymeleaf
     - spring-boot-threadpool
@@ -36,6 +34,7 @@ There are some code when I learn someting.
     - spring-boot-mongo
     - spring-boot-rabbitmq
     - spring-boot-mybatis-plus
+  - spring-cloud
 - storm
 - storm-kafka
 - zookeeper

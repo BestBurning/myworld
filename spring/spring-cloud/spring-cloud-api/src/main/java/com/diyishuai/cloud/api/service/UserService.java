@@ -1,6 +1,7 @@
 package com.diyishuai.cloud.api.service;
 
 import com.diyishuai.cloud.api.model.User;
+import com.diyishuai.cloud.api.service.fallback.UserServiceFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +14,7 @@ import java.util.List;
  * @date: 2019-11-23
  * @description:
  */
-@FeignClient(name = "PROVIDER-USER")
+@FeignClient(name = "PROVIDER-USER",fallbackFactory = UserServiceFallbackFactory.class)
 public interface UserService{
 
     @PostMapping(path = "/user")

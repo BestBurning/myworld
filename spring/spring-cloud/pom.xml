@@ -14,6 +14,7 @@
         <module>spring-cloud-consumer-user</module>
         <module>spring-cloud-eureka</module>
         <module>spring-cloud-provider-user</module>
+        <module>spring-cloud-hystrix-dashboard</module>
     </modules>
     <artifactId>spring-cloud</artifactId>
     <properties>

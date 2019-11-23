@@ -1,34 +1,20 @@
 server:
-  port: 8881
+  port: 9001
 
 spring:
   profiles:
     active: local
   application:
-    name: consumer-user
+    name: hystrix-dashboard
 eureka:
   instance:
-    instance-id: ${spring.application.name}-${random.value}
+    instance-id: ${spring.application.name}
     prefer-ip-address: true
-
-feign:
-  hystrix:
-    enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: 'hystrix.stream'
-
 
 info:
   app:
     name: ${spring.application.name}
-    description: UserCURD功能的调用者
-  build:
-    artifactId: @project.artifactId@
-    version: @project.version@
+    description: HystrixDashboard微服务监控面板
 
 ---
 spring:

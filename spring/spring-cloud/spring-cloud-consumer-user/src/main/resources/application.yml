@@ -2,17 +2,15 @@ server:
   port: 8881
 
 spring:
+  profiles:
+    active: local
   application:
     name: consumer-user
 
-
 eureka:
   instance:
-    instance-id: consumer-user
+    instance-id: ${spring.application.name}-${random.value}
     prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka
 
 info:
   app:
@@ -21,3 +19,21 @@ info:
   build:
     artifactId: @project.artifactId@
     version: @project.version@
+
+---
+spring:
+  profiles: local
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+---
+spring:
+  profiles: cluster
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka

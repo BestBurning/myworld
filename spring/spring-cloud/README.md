@@ -23,6 +23,12 @@ eureka1:8761
 eureka2:8762
 eureka3:8763
 ```
+#### start admin server
+ `spring.profiles.active`以`cluster`启动`AdminApplication`
+ ```$xslt
+ web port:
+ localhost:8000
+ ```
 
 #### start provider cluster
 `spring.profiles.active`分别以`p1` `p2` `p3`启动`ProviderApplication`
@@ -53,3 +59,4 @@ localhost:9001
 port:
 localhost:8751
 ```
+

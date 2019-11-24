@@ -6,6 +6,11 @@ spring:
     active: local
   application:
     name: hystrix-dashboard
+  boot:
+    admin:
+      client:
+        url: http://localhost:8000
+
 eureka:
   instance:
     instance-id: ${spring.application.name}

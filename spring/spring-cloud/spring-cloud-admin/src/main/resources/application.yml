@@ -1,33 +1,20 @@
 server:
-  port: 8751
+  port: 8000
 
 spring:
   profiles:
     active: local
   application:
-    name: zuul-gateway
-  boot:
-    admin:
-      client:
-        url: http://localhost:8000
-
+    name: admin-server
 eureka:
   instance:
-    instance-id: zuul
+    instance-id: ${spring.application.name}
     prefer-ip-address: true
-
-zuul:
-  routes:
-    user:
-      serviceId: provider-user
-      path: /myuser/**
-  prefix: /di1shuai #公共前缀
-  ignored-services: provider-user
 
 info:
   app:
     name: ${spring.application.name}
-    description: Zuul路由网关
+    description: SpringBootAdmin 服务器
 
 ---
 spring:

@@ -1,0 +1,43 @@
+server:
+  port: 8751
+
+spring:
+  profiles:
+    active: local
+  application:
+    name: zuul-gateway
+eureka:
+  instance:
+    instance-id: zuul
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    user:
+      serviceId: provider-user
+      path: /myuser/**
+  prefix: /di1shuai #公共前缀
+  ignored-services: provider-user
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: Zuul路由网关
+
+---
+spring:
+  profiles: local
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+---
+spring:
+  profiles: cluster
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka,http://eureka2:8762/eureka,http://eureka3:8763/eureka

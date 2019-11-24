@@ -10,13 +10,8 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-cloud-api</module>
-        <module>spring-cloud-consumer-user</module>
-        <module>spring-cloud-eureka</module>
-        <module>spring-cloud-provider-user</module>
-        <module>spring-cloud-hystrix-dashboard</module>
-        <module>spring-cloud-zuul</module>
-        <module>spring-cloud-admin</module>
+        <module>spring-cloud-alibaba</module>
+        <module>spring-cloud-netflix</module>
     </modules>
     <artifactId>spring-cloud</artifactId>
     <properties>

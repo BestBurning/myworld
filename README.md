@@ -9,9 +9,7 @@ There are some code when I learn someting.
 - hadoop
 - hbase 
 - hive
-- java
-  - concurrent
-  - java8
+- java8
 - jsoup
 - jwt
 - kafka
@@ -35,6 +33,8 @@ There are some code when I learn someting.
     - spring-boot-rabbitmq
     - spring-boot-mybatis-plus
   - spring-cloud
+    - spring-cloud-alibaba
+    - spring-cloud-netflix
 - storm
 - storm-kafka
 - zookeeper

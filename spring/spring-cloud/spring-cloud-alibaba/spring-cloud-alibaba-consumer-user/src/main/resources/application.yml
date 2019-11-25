@@ -1,0 +1,11 @@
+server:
+  port: 8881
+  application:
+    name: consumer-user
+spring:
+  application:
+    name: aliconsumer-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848

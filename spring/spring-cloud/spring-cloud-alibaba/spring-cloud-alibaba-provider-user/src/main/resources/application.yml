@@ -1,0 +1,71 @@
+server:
+  port: 8081
+spring:
+  profiles:
+    active: local
+  application:
+    name: aliprovider-user
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud
+    username: root
+    password: admin
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+
+info:
+  app:
+    name: ${spring.application.name}
+    description: 提供User表的CURD功能
+  build:
+    artifactId: @project.artifactId@
+    version: @project.version@
+
+---
+# local
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud
+server:
+  port: 8081
+
+---
+# p1
+spring:
+  profiles: p1
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud1
+
+server:
+  port: 8081
+
+
+---
+# p2
+spring:
+  profiles: p2
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud2
+
+server:
+  port: 8082
+
+
+---
+# p3
+spring:
+  profiles: p3
+  datasource:
+    url: jdbc:mysql://ss.di1shuai.com:3306/cloud3
+
+server:
+  port: 8083

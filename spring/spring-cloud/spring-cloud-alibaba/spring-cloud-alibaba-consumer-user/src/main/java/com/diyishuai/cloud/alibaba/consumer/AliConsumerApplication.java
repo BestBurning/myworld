@@ -2,6 +2,7 @@ package com.diyishuai.cloud.alibaba.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author: Bruce
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @description:
  */
 @SpringBootApplication
+@EnableFeignClients(basePackages = "com.diyishuai.cloud.alibaba")
 public class AliConsumerApplication {
 
     public static void main(String[] args) {

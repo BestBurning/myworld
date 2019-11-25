@@ -1,4 +1,4 @@
-package com.diyishuai.cloud.alibaba.provider.impl;
+package com.diyishuai.cloud.alibaba.provider.service.impl;
 
 
 import com.diyishuai.cloud.alibaba.api.model.User;

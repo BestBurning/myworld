@@ -3,8 +3,6 @@ server:
 spring:
   profiles:
     active: local
-  application:
-    name: aliprovider-user
   cloud:
     nacos:
       discovery:

@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: aliprovider-user
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        ext-config:
+          refresh: true

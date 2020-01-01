@@ -21,5 +21,6 @@
         <module>spring-boot-rabbitmq</module>
         <module>spring-boot-mybatis-plus</module>
         <module>spring-boot-admin</module>
+        <module>spring-boot-security</module>
     </modules>
 </project>

@@ -32,6 +32,7 @@ There are some code when I learn someting.
     - spring-boot-mongo
     - spring-boot-rabbitmq
     - spring-boot-mybatis-plus
+    - spring-boot-springfox
   - spring-cloud
     - spring-cloud-alibaba
     - spring-cloud-netflix

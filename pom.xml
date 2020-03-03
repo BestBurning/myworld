@@ -28,6 +28,7 @@
         <module>flink</module>
         <module>hive</module>
         <module>spring</module>
+        <module>jna</module>
     </modules>
     <packaging>pom</packaging>
 

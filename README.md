@@ -10,6 +10,7 @@ There are some code when I learn someting.
 - hbase 
 - hive
 - java8
+- jna
 - jsoup
 - jwt
 - kafka

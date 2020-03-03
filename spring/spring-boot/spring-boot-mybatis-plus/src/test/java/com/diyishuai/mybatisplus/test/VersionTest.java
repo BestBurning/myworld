@@ -1,8 +1,10 @@
 package com.diyishuai.mybatisplus.test;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.diyishuai.mybatisplus.MybtaisPlusApplication;
 import com.diyishuai.mybatisplus.dao.StudentDao;
 import com.diyishuai.mybatisplus.domain.Student;
+import com.diyishuai.mybatisplus.service.StudentService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ public class VersionTest {
 
     @Autowired
     private StudentDao studentDao;
+
+    @Autowired
+    private StudentService studentService;
 
     @Test
     public void insertTest(){
@@ -49,9 +54,20 @@ public class VersionTest {
         Student student = new Student();
         student.setId(1);
         student.setName("hehe");
-        student.setAdmin(true);
+        student.isAdmin();
         studentDao.updateById(student);
 
+    }
+
+    @Test
+    public void selectTest(){
+        studentDao.selectList(null).forEach(s -> System.out.println(s));
+    }
+
+    @Test
+    public void pageTest(){
+        studentService.page(new Page<Student>().setCurrent(1).setSize(4))
+        .getRecords().forEach(s -> System.out.println(s));
     }
 
 

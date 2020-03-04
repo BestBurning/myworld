@@ -29,6 +29,7 @@
         <module>hive</module>
         <module>spring</module>
         <module>jna</module>
+        <module>tess4j</module>
     </modules>
     <packaging>pom</packaging>
 

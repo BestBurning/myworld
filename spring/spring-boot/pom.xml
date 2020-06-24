@@ -23,5 +23,6 @@
         <module>spring-boot-admin</module>
         <module>spring-boot-security</module>
         <module>spring-boot-springfox</module>
+        <module>spring-boot-aop</module>
     </modules>
 </project>

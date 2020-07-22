@@ -1,5 +1,7 @@
 package com.di1shuai.io.bio;
 
+import com.di1shuai.io.AbstractServer;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -13,18 +15,23 @@ import java.util.concurrent.Executors;
  * @date: 2020/7/22
  * @description:
  */
-public class BIOServer {
+public class BIOServer extends AbstractServer {
     //默认的端口号
-    private static int DEFAULT_PORT = 8082;
+    private int DEFAULT_PORT = 8082;
     //线程池 懒汉式的单例
     private static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
-    public static void main(String[] args) {
-        ServerSocket serverSocket = null;
+    public volatile boolean open = false;
+
+    private ServerSocket serverSocket = null;
+
+    @Override
+    public void start() {
+        open = true;
         try {
             System.out.println("监听 >" + DEFAULT_PORT + "< 端口");
             serverSocket = new ServerSocket(DEFAULT_PORT);
-            while (true) {
+            while (open) {
                 Socket socket = serverSocket.accept();
                 //当然业务处理过程可以交给一个线程（这里可以使用线程池）,并且线程的创建是很耗资源的。
                 //最终改变不了.accept()只能一个一个接受socket的情况,并且被阻塞的情况
@@ -54,6 +61,29 @@ public class BIOServer {
             }
         }
     }
+
+    @Override
+    public void stop() {
+        open = false;
+        if (serverSocket != null) {
+            try {
+                serverSocket.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+        if(executorService!=null && !executorService.isShutdown()){
+            executorService.shutdown();
+        }
+
+    }
+
+    public static void main(String[] args) {
+        BIOServer bioServer = new BIOServer();
+        bioServer.start();
+    }
+
 }
 
 class ServerRequestHandle implements Runnable {

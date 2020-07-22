@@ -30,6 +30,7 @@
         <module>spring</module>
         <module>jna</module>
         <module>tess4j</module>
+        <module>IO</module>
     </modules>
     <packaging>pom</packaging>
 

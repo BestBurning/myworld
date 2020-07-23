@@ -31,6 +31,7 @@
         <module>jna</module>
         <module>tess4j</module>
         <module>IO</module>
+        <module>jmx</module>
     </modules>
     <packaging>pom</packaging>
 

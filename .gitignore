@@ -72,3 +72,5 @@ fabric.properties
 *.iml
 /test/
 /.idea/
+*.project
+*.classpath

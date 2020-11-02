@@ -1,4 +1,10 @@
-# MyWorld
+# Deprecated
+
+This repository was deprecated.
+Please jump to [code-tree](https://github.com/BestBurning/code-tree)
+
+## MyWorld
+
 This is my world.
 There are some code when I learn someting.
 

@@ -1,7 +1,7 @@
 # Deprecated
 
 This repository was deprecated.
-Please jump to [code-tree](https://github.com/BestBurning/code-tree)
+Please jump to [code-index](https://github.com/BestBurning/code-index)
 
 ## MyWorld
 
